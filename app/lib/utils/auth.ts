@@ -41,6 +41,7 @@ export const authOptions: NextAuthOptions = {
                         provider: userProvider,
                     }
                 })
+                console.log(newUser)
                 return true
             }catch(e){
                 console.error(e)
