@@ -16,8 +16,8 @@ export default function Page() {
 
   return (
     <>
+      <AppBar></AppBar>
       <main className={styles.main}>
-        <AppBar></AppBar>
         <Hero anarc={anarc} desc1={desc1} desc22={desc22} desc21={desc21}/>
       </main>
       <Description text={description} ></Description>

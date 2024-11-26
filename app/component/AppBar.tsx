@@ -16,7 +16,7 @@ export function AppBar() {
         className="flex items-center justify-between max-w-7xl mx-auto"
       >
         <div className='flex items-center space-x-2'>
-            <Image src='/anarc.svg' alt='ANARC logo' className='h-8 w-8 md:h-10 md:w-10 object-contain' />
+            <Image width={1} height={1} src='/anarc.svg' alt='ANARC logo' className='h-8 w-8 md:h-10 md:w-10 object-contain' />
             <span className="text-lg md:text-2xl font-bold tracking-tight text-foreground">
             ANARC
             </span>
