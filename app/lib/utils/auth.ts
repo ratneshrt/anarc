@@ -16,6 +16,9 @@ export const authOptions: NextAuthOptions = {
         })
     ],
     secret: process.env.NEXTAUTH_SECRET ?? "secret",
+    pages: {
+        signIn: '/auth/signin'
+    },
     callbacks: {
         async signIn({ user, account }){
             if(!user.email){
