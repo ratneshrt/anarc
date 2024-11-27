@@ -5,7 +5,6 @@ import styles from '../page.module.scss';
 import useMousePosition from '../lib/utils/useMousePostion';
 import { motion } from 'framer-motion';
 import { Spotlight } from './ui/Soptlight';
-import { AuroraBackground } from './ui/Aurora-Background';
 
 export function Hero({ anarc, desc1, desc21, desc22 }: { anarc: string; desc1: string; desc21: string; desc22: string }) {
   const [isHovered, setHovered] = useState(false);

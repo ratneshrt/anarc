@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Button } from './Button';
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from 'next/image'
+import Link from 'next/link';
 
 export function AppBar() {
   const session = useSession()
@@ -15,12 +16,11 @@ export function AppBar() {
         transition={{ duration: 0.5, ease: 'easeInOut' }}
         className="flex items-center justify-between max-w-7xl mx-auto"
       >
-        <div className='flex items-center space-x-2'>
-            <Image width={1} height={1} src='/anarc.svg' alt='ANARC logo' className='h-8 w-8 md:h-10 md:w-10 object-contain' />
-            <span className="text-lg md:text-2xl font-bold tracking-tight text-foreground">
-            ANARC
-            </span>
-        </div>
+        <Link href='/'>
+          <div className='flex items-center space-x-2'>
+              <Image width={1} height={1} src='/anarc.svg' alt='ANARC logo' className='h-18 w-32 md:h-18 md:w-18 object-contain' />
+          </div>
+        </Link>
           {session.data?.user && <Button label='Sign Out' onClick={() => signOut({ callbackUrl: "/" })} />}
           {!session.data?.user && <Button label='Sign In' onClick={() => signIn()} />}
       </motion.div>
